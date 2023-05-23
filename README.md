@@ -5,16 +5,16 @@ Dockerizing a basic web application using Docker and Docker Compose.
 The web application consists of a single HTML file with associated CSS and JavaScript files.
 
 1. Create directory
-	mkdir web_application
+---	mkdir web_application
 
 2. Create Dockerfile
-	vim Dockerfile
+---	vim Dockerfile
 
-	##Dockerfile
-	FROM nginx:latest	# Use nginx official image
-	EXPOSE 80			# Expose port 80 to port 8080
-	WORKDIR /app		# Set a working directory
-	COPY . /app			# Copy file into the container
+---	##Dockerfile
+---	FROM nginx:latest	# Use nginx official image
+---	EXPOSE 80			# Expose port 80 to port 8080
+---	WORKDIR /app		# Set a working directory
+---	COPY . /app			# Copy file into the container
 
 3. Create volume
 	docker volume create --name web-volume
