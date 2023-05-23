@@ -1,6 +1,7 @@
 # running-nginx-on-docker
 
 Description:
+
 Dockerizing a basic web application using Docker and Docker Compose. 
 The web application consists of a single HTML file with associated CSS and JavaScript files.
 
