@@ -1,0 +1,5 @@
+##Dockerfile
+FROM nginx:latest	# Use nginx official image
+EXPOSE 80			# Expose port 80 to port 8080
+WORKDIR /app		# Set a working directory
+COPY . /app			# Copy file into the container

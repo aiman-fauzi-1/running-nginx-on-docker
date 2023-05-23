@@ -1,0 +1,21 @@
+##docker-compose.yml
+version: '3'
+services:
+  web:
+    image: nginx:latest
+    volumes:
+      - web-volume:/var/lib/docker/volumes/web-volume/_data
+    ports:
+      - ${APP_PORT}:80	#env var
+	deploy:
+      resources:
+        limits:
+          cpus: 0.50
+          memory: 512M
+        reservations:
+          cpus: 0.25
+          memory: 128M
+
+volumes:
+  web-volume:
+    external: true
